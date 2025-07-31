@@ -1,25 +1,27 @@
 import { Mail, MapPin, Phone, SendIcon, UserPen } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { useRef } from "react";
 
 export const ContactSection = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const messageRef = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    setIsSubmitting(true);
+    const name = nameRef.current?.value || "";
+    const email = emailRef.current?.value || "";
+    const message = messageRef.current?.value || "";
 
-    setTimeout(() => {
-      toast({
-        title: "Message Sent",
-        description: "Thank you for reaching out! I will get back to you soon.",
-      });
+    const subject = encodeURIComponent(`Portfolio Marco`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\n${message}`
+    );
 
-      setIsSubmitting(false);
-    }, 1500);
+    window.open(
+      `mailto:marco.grotto@swisscom.com?subject=${subject}&body=${body}`
+    );
   };
 
   return (
@@ -113,6 +115,7 @@ export const ContactSection = () => {
                   Your Name
                 </label>
                 <input
+                  ref={nameRef}
                   type="text"
                   id="name"
                   name="name"
@@ -130,6 +133,7 @@ export const ContactSection = () => {
                   Your Email
                 </label>
                 <input
+                  ref={emailRef}
                   type="email"
                   id="email"
                   name="email"
@@ -147,6 +151,7 @@ export const ContactSection = () => {
                   Your Message
                 </label>
                 <textarea
+                  ref={messageRef}
                   id="message"
                   name="message"
                   required
@@ -157,12 +162,11 @@ export const ContactSection = () => {
 
               <button
                 type="submit"
-                disabled={isSubmitting}
                 className={cn(
                   "cosmic-button w-full flex items-center justify-center gap-2"
                 )}
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                Send Message
                 <SendIcon size={16} />
               </button>
             </form>
