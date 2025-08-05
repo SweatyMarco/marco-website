@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest  # Consider using Linux for better performance
 
     steps:
       # Checkout the repository
@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 18  # Ensure this matches your project's requirements
 
       # Install dependencies
       - name: Install dependencies
@@ -26,11 +26,11 @@ jobs:
 
       # Build the project
       - name: Build project
-        run: npm run build
+        run: npm run build  # Verify this is the correct build command for your setup
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
+          publish_dir: dist  # Ensure this is the right directory for your build output
