@@ -9,7 +9,7 @@ export default defineConfig({
   base: "/Marco-Portfolio",
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(__dirname, "src"),
     },
   },
 });
