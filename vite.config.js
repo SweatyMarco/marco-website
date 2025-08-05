@@ -6,6 +6,11 @@ import path from "path";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: "/Marco-Portfolio",
+  server: {
+    open: true,
+    port: 3001,
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
