@@ -1,7 +1,6 @@
 {
   "name": "-protfolio-website",
   "private": true,
-  "homepage": "https://sweatymarco.github.io/Marco-Portfolio/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
