@@ -6,7 +6,7 @@ const projects = [
     title: "Fasanella Margherita",
     description:
       "Ziel des Projektes ist für das Design System von Swisscom (SDX) eine benutzerdefinierte web component zu entwickeln.",
-    image: "public/projects/Team-Minion_1000px.png",
+    image: "/marco-website/projects/Team-Minion_1000px.png",
     tags: ["1 Lehrjahr", "2 Semester"],
     link: "https://wd103.myworkday.com/swisscom/d/inst/25060$329/rel-task/2998$37648.htmld#path=/608647e9045f1000ec7433aac8010000/view",
   },
@@ -16,7 +16,7 @@ const projects = [
     title: "Georgokitsos Dimosthenis",
     description:
       "Erste Erfahrungen mit den Grundlagen von HTML, CSS, JavaScript und TypeScript gesammelt",
-    image: "/projects/Skizzen-Visuel-Codemix-01 (2).png",
+    image: "/marco-website/Skizzen-Visuel-Codemix-01 (2).png",
     tags: ["1 Lehrjahr", "1 Semester"],
     link: "https://wd103.myworkday.com/swisscom/d/inst/25060$227/rel-task/2998$37648.htmld#path=/608647e9045f1000ec7108a879810001/view",
   },
