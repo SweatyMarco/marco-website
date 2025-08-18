@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 
 export const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleTheme = () => {
     if (isDarkMode) {
@@ -19,32 +20,34 @@ export const ThemeToggle = () => {
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark") {
-      setIsDarkMode(true);
-      document.documentElement.classList.add("dark");
-    } else {
-      localStorage.setItem("theme", "light");
-      setIsDarkMode(false);
-    }
 
     if (storedTheme) {
-      setIsDarkMode(storedTheme === "dark");
-      document.documentElement.classList.toggle("dark", storedTheme === "dark");
+      const isDark = storedTheme === "dark";
+      setIsDarkMode(isDark);
+      document.documentElement.classList.toggle("dark", isDark);
     } else {
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
-      setIsDarkMode(prefersDark);
-      document.documentElement.classList.toggle("dark", prefersDark);
+      // Standard: Dark Mode aktivieren
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      setIsDarkMode(true);
     }
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <button
       onClick={toggleTheme}
       className={cn(
-        "fixed max-sm:hidden top-5 right-5 z-50 rounded-full transition-colors duration-300 cursor-pointer",
-        "focus:outlin-hidden"
+        "fixed  right-5 z-50  rounded-full transition-all duration-300 cursor-pointer",
+
+        "focus:outline-hidden",
+        isScrolled ? "top-4" : "top-6"
       )}
     >
       {isDarkMode ? (

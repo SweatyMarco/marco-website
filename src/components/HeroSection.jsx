@@ -1,6 +1,13 @@
 import { ArrowDown } from "lucide-react";
 
 export const HeroSection = () => {
+  const handleScrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
       id="hero"
@@ -23,20 +30,26 @@ export const HeroSection = () => {
             Ich bin Informatiker mit Fachrichtung Applikationsentwicklung und
             freue mich sehr, dass du den Weg hierher gefunden hast. Auf dieser
             Seite findest du alle wichtigen Informationen über mich, meine
-            Arbeit und meine Projekte. Viel Spass beim reinschauen!
+            Skills und meine Projekte. Viel Spass beim reinschauen!
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-            <a href="#projects" className="cosmic-button">
-              Meine Projekte
+            <a href="#projects" className="cosmic-button select-none">
+              Zu meinen Projekten
             </a>
           </div>
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span className="text-small text-muted-foreground mb-2">Scroll</span>
-        <ArrowDown className="h-5 w-5 text-primary"></ArrowDown>
+      {/* Scroll to About Section */}
+      <div
+        onClick={handleScrollToAbout}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce cursor-pointer"
+      >
+        <span className="text-sm text-muted-foreground mb-2 select-none">
+          Scroll
+        </span>
+        <ArrowDown className="h-5 w-5 text-primary" />
       </div>
     </section>
   );

@@ -11,19 +11,14 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              Leidenschaftlicher Webentwickler & Lehrling{" "}
+              Motivierter Webentwickler & Lehrling{" "}
             </h3>
 
             <p className="text-muted-foreground">
-              With over 5 years of expirience in web development, I specialize
-              in creating responsive, accessible, and performant web
-              applications using modern technologies.
-            </p>
-
-            <p className="text-muted-foreground">
-              With over 5 years of expirience in web development, I specialize
-              in creating responsive, accessible, and performant web
-              applications using modern technologies.
+              Ich lege viel Wert auf Teamarbeit, Fleiss und gute Kommunikation.
+              Ich lerne schnell neue Dinge und bin neugierig, sodass ich immer
+              motiviert bin, neue Aufgaben anzupacken und kreative Lösungen zu
+              finden.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -34,47 +29,52 @@ export const AboutSection = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-6">
-            <div className="gradient-border p-6 card-hover">
+            <div className="gradient-border p-6 card-hover ">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
+                  <h4 className="font-semibold text-lg">Webentwicklung</h4>
                   <p className="text-muted-foreground">
-                    Creating responsive websites and web applications with
-                    modern frameworks.
+                    Erstellung moderner, responsiver Websites und Webanwendungen
+                    mit aktuellen Frameworks und Technologien.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="gradient-border p-6 card-hover">
+            <div className="gradient-border p-6 card-hover ">
               {" "}
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <User className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
+                  <h4 className="font-semibold text-lg">
+                    Agile Softwareentwicklung
+                  </h4>
                   <p className="text-muted-foreground">
-                    Creating responsive websites and web applications with
-                    modern frameworks.
+                    Arbeiten mit agilen Methoden wie Scrum und Kanban, um
+                    Projekte effizient umzusetzen.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="gradient-border p-6 card-hover">
+            <div className="gradient-border p-6 card-hover ">
               {" "}
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Briefcase className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Journey</h4>
+                  <h4 className="font-semibold text-lg">
+                    Ausbildung als Applikationsentwickler
+                  </h4>
                   <p className="text-muted-foreground">
-                    Creating responsive websites and web applications with
-                    modern frameworks.
+                    Derzeit im 2. Lehrjahr als Informatiker EFZ Fachrichtung
+                    Applikationsentwicklung und offen für neue Erfahrungen und
+                    Herausforderungen.
                   </p>
                 </div>
               </div>

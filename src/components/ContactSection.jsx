@@ -28,19 +28,21 @@ export const ContactSection = () => {
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Get in <span className="text-primary">Touch</span>
+          Schreib <span className="text-primary">mir</span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-2-2xl mx-auto">
-          Have a project in mind or want to collaborate? I'm always open to
-          discussing new ideas, projects, or opportunities. Feel free to reach
-          out via the contact form below or connect with me on social media.
-          Let's create something amazing together!
+          Bietest du ein Projekt an und möchtest du mit mir zusammenarbeiten?{" "}
+          Ich bin immer offen für neue Ideen, Projekte oder Möglichkeiten.
+          Kontaktiere mich gerne über das Kontaktformular oder schreib mir per
+          Teams. Ich freue mich auf deine Nachricht!
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+            <h3 className="text-2xl font-semibold mb-6">
+              Kontakt Informationen
+            </h3>
             <div className="space-y-6 justify-center">
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
@@ -62,10 +64,7 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium flex items-start">Phone</h4>
-                  <a
-                    href="tel:076 505 54 52"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
+                  <a className="text-muted-foreground  transition-colors">
                     +41 076 505 54 52
                   </a>
                 </div>
@@ -76,7 +75,7 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium flex items-start">Location</h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
+                  <a className="text-muted-foreground transition-colors">
                     Zürich, Schweiz
                   </a>
                 </div>
@@ -104,7 +103,9 @@ export const ContactSection = () => {
             className="bg-card p-8 rounded-lg shadow-xs"
             onSubmit={handleSubmit}
           >
-            <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
+            <h3 className="text-2xl font-semibold mb-6">
+              Eine Nachricht schicken
+            </h3>
 
             <form className="space-y-6">
               <div>
@@ -112,7 +113,7 @@ export const ContactSection = () => {
                   htmlFor="name"
                   className="block text-small font-medium mb-2"
                 >
-                  Your Name
+                  Dein Name
                 </label>
                 <input
                   ref={nameRef}
@@ -121,7 +122,7 @@ export const ContactSection = () => {
                   name="name"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
-                  placeholder="Marco Grotto..."
+                  // placeholder="Max Mustermann..."
                 />
               </div>
 
@@ -130,7 +131,7 @@ export const ContactSection = () => {
                   htmlFor="email"
                   className="block text-small font-medium mb-2"
                 >
-                  Your Email
+                  Deine Email
                 </label>
                 <input
                   ref={emailRef}
@@ -139,34 +140,34 @@ export const ContactSection = () => {
                   name="email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
-                  placeholder="john@gmail.com"
+                  // placeholder="maxmustermann@gmail.com"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="message"
-                  classmessage="block text-small font-medium mb-2"
+                  className="block text-small font-medium mb-2"
                 >
-                  Your Message
+                  Deine Nachricht
                 </label>
                 <textarea
                   ref={messageRef}
                   id="message"
                   name="message"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
-                  placeholder="Hello, I would like to discuss..."
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary "
+                  // placeholder="Hallo..."
                 />
               </div>
 
               <button
                 type="submit"
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
+                  "cosmic-button w-full flex items-center justify-center gap-2 cursor-pointer"
                 )}
               >
-                Send Message
+                Nachricht senden
                 <SendIcon size={16} />
               </button>
             </form>
