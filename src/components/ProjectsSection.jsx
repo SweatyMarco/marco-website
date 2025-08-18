@@ -26,7 +26,7 @@ const projects = [
     title: "First Steps Helfer",
     description:
       "Im Projekt ging es darum, den neuen Firsties den Start in die Swisscom leichter zu machen. Ich habe sie bei ihren ersten Schritten unterstützt.",
-    image: "dist/projects/swisscom (1).png",
+    image: "/projects/swisscom (1).png",
     tags: ["4. Aug – 15. Aug 2025", "2. Lehrjahr"],
   },
 
@@ -35,7 +35,7 @@ const projects = [
     title: "Tech Innovators",
     description:
       "Im Projekt wurden 70–80 JAVA/SpringBoot Komponenten modernisiert und die Betriebsprozesse gemeinsam mit internationalen Teams optimiert.",
-    image: "dist/projects/maybegut.png",
+    image: "/projects/maybegut.png",
     tags: ["Aug. 2025 – März. 2026", "2. Lehrjahr"],
     link: "https://wd103.myworkday.com/swisscom/d/inst/25060$1482/rel-task/2998$37648.htmld#path=/6ec631d2da0410011d8f98d9d4400001/view",
   },
