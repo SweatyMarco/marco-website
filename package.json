@@ -2,7 +2,7 @@
   "name": "-protfolio-website",
   "homepage": "https://SweatyMarco.github.io/marco-website/",
   "private": true,
-  "version": "0.0.0",
+  "version": "19.2.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
